@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div id="myDIV" class="header">
+    <form [formGroup]="addprojecttaskdata" (ngSubmit)="addprojecttask(addprojecttaskdata.value)">
+    <h2>Task Create</h2>
+    <input class="input1" type="text"  formControlName="title" placeholder="Title...">
+    
+    <br><br> <input class="input2" type="text" formControlName="description" placeholder="Discription">
+
+    <button type="ngsubmit" class="addBtn">Create</button>
+    </form>
+  </div>
+  <br>
+  
+<div>
+  <dl>
+    <dt *ngFor="let projecttask of projectTaskList">
+      <a class='btn'><i (click)="opentask(projecttask)">{{projecttask.title}}</i></a> 
+    </dt>
+  </dl>
+</div>

@@ -1,0 +1,80 @@
+<app-header></app-header>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <div style="background-color: #99A3A4">
+        <div class="modal-dialog modal-register">
+            <div class="modal-content">
+                <h4 class="modal-title">Add Project</h4>
+                <div class="modal-body">
+                    <!-- Form register -->
+                    <form [formGroup]="addprojectdata"  (ngSubmit)="createProject(addprojectdata.value)">                     
+                        <div class="md-form">
+                            <i class="fa fa-id prefix white-text"></i> <label
+                               >Project ID</label>
+                            <input type="text"  class="form-control"
+                                name="projectId" formControlName="projectId" required="true" />
+     
+                        </div>
+                                               
+                        <div class="md-form">
+                            <i class="fa fa-text prefix white-text"></i> <label
+                               >Project Name</label>
+                            <input type="text"  class="form-control"
+                                name="projectName" formControlName="projectName" required="true" />
+     
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-text prefix white-text"></i> <label
+                               >Discription</label>
+                            <input type="text"  class="form-control"
+                                name="projectDiscription" formControlName="projectDiscription" required="true" />
+    
+                        </div>
+                        
+                        
+                        <div class="md-form">
+                            <i class="fa fa-text prefix white-text"></i> <label
+                                >Project Start Date</label>
+                            <input type="date" 
+                                class="form-control" name="projectStartDate" formControlName="projectStartDate" required="true" />
+    
+                        </div>
+                        
+                        <div class="md-form">
+                            <i class="fa fa-text prefix white-text"></i> <label
+                                >Project Start Date</label>
+                            <input type="date" 
+                                class="form-control" name="projectEndDate" formControlName="projectEndDate" required="true" />
+    
+                        </div>
+                        <br>
+                        <div class="md-form">
+                             <label class="col-md-4 control-label" for="button1id"></label> <i
+                                        class="fa fa-text prefix white-text"></i>
+                            <button style="background-color: green" type="submit"
+                                         class="btn btn-info btn-sm">Add Project</button>
+                                         &nbsp;&nbsp; &nbsp;&nbsp;
+                             <button style="background-color: red" type="reset"
+                                       class="btn btn-info btn-sm">Reset</button>
+                                       &nbsp;&nbsp; &nbsp;&nbsp;   
+                             <button style="background-color: gray" type="reset"
+                                       class="btn btn-info btn-sm"><a href="/dashboard/projects" >Cancel</a></button>
+                        </div>                      
+                    </form>
+    
+                    <!-- Form register -->
+                </div>
+            </div>
+        </div>
+    </div>
+    

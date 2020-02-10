@@ -1,0 +1,63 @@
+table.greenTable {
+    font-family: Georgia, serif;
+    border: 6px solid white;
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin-left: 135px;
+  }
+  table.greenTable td, table.greenTable th {
+    border: 1px solid white;
+    padding: 10px 2px;
+  }
+  table.greenTable tbody td {
+    font-size: 13px;
+  }
+  table.greenTable thead {
+    background: cornflowerblue;
+    background: -moz-linear-gradient(top, cornflowerblue 0%, cornflowerblue 66%, cornflowerblue 100%);
+    background: -webkit-linear-gradient(top, cornflowerblue 0%, cornflowerblue 66%, cornflowerblue 100%);
+    background: linear-gradient(to bottom, cornflowerblue 0%, cornflowerblue 66%, cornflowerblue 100%);
+    border-bottom: 0px solid #444444;
+  }
+  table.greenTable thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    border-left: 2px solid white;
+  }
+  table.greenTable thead th:first-child {
+    border-left: none;
+  }
+
+  .head{
+    margin-left:  -260%;
+    font-family: Georgia, serif;
+   /* border: 5px solid #24943A;*/
+    background-color: #99A3A4;
+    width: 517%;
+    margin-top: 36%;
+  }
+  .addbutton{
+    margin-left: 75%;
+  }
+
+  .btn-group-sm>.btn, .btn-sm {
+    padding: 5px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-left: 29.5%;
+    margin-right: -29%;
+
+}
+.btn-group-sm>.btn, .btn-sm1 {
+    padding: 5px 11px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-left: 31%;
+    margin-right: -27%;
+
+}

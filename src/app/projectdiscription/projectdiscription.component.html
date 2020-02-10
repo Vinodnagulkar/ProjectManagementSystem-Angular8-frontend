@@ -1,0 +1,73 @@
+<app-header></app-header>
+<head>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="ISO-8859-1">
+    
+    </head>
+    <div style="background-color: #99A3A4">
+        <form>
+            <div class="addbutton"><h3 class="head" style="color: black">PROJECT DISCRIPTION
+                <a href="dashboard/projects"
+                class="btn btn-info btn-sm"><span
+                    class="glyphicon glyphicon-add"></span>Back</a> <a href="projecttask "
+                    class="btn btn-info btn-sm"><span
+                        class="glyphicon glyphicon-add"></span>Create Project Task</a></h3></div>
+                <table class="greenTable">
+                    <thead>
+
+                        <tr style="color: black">
+                            <th>Project Id</th>
+                            <td>
+                                <span *ngIf="!isActive">{{project.projectId}}</span>
+                                <input *ngIf="isActive" name="isActive" class="form-control mr-sm-2" [(ngModel)]="project.projectId" />
+                            </td>
+                        </tr>
+                    <tr>
+                            <th>Project Name</th>
+                            <td>{{project.projectName}}</td>
+                        </tr><tr>
+                            <th>ProjectDiscription</th>
+                            <td>{{project.projectDiscription}}</td>
+                        </tr><tr>
+                            <th>Project Start Date</th>
+                            <td>{{project.projectStartDate | date: 'ddMMyyyy'}}</td>
+                        </tr><tr>
+                            <th>Project End Date</th>
+                            <td>{{project.projectEndDate | date: 'ddMMyyyy'}}</td>
+                        </tr><tr>
+                            <th>Action</th>
+                            <td> 
+                                    <button *ngIf="!isActive" (click)=" isActive = !isActive;"
+                                    class="btn btn-info btn-sm1"><span
+                                    class="glyphicon glyphicon-edit"></span> Edit</button>
+                                   
+                                    <button *ngIf="isActive" (click)="backToDiscription(); isActive = !isActive;"
+                                    class="btn btn-info btn-sm1"><span
+                                    class="glyphicon glyphicon-cancel"></span> Cancel</button>
+                                    &nbsp;
+                                    <button *ngIf="isActive" (click)="createProject(project); isActive = !isActive;"
+                                    class="btn btn-info btn-sm1"><span
+                                    class="glyphicon glyphicon-edit"></span> Save</button>
+                                    &nbsp;
+
+                                  <button *ngIf="!isActive" (click)="deleteProject(project.pid)"
+                                    class="btn btn-info btn-sm1"><span
+                                     class="glyphicon glyphicon-remove"></span> Delete</button>
+                                    
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                           <router-outlet></router-outlet>  
+                    </tbody>
+                </table>
+        </form>
+        <router-outlet></router-outlet>
+    </div>

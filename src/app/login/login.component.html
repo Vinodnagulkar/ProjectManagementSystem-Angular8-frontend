@@ -1,0 +1,48 @@
+
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<div class="mybody" style="background-color: grey">
+	<div class="image">	
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+				
+				<h4 class="modal-title">Account Login</h4>
+			</div>
+			<div class="modal-body">
+					<form [formGroup]="loginformdata" (ngSubmit)="onClickSubmit(loginformdata.value)">
+					<div class="form-group">
+						<input type="email" class="form-control" name="email"
+						formControlName="email"	placeholder="Email" required="required" />
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control" name="password"
+						formControlName="password"	placeholder="Password" required="required" />
+					</div>
+					<div class="form-group">
+						<button type="submit"
+							class="btn btn-primary btn-lg btn-block login-btn" value="login">Login</button>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<p>
+					New User? <a style="color: grey" href="/register">Register
+						Here</a>
+				</p>
+				<a style="color: grey" href="/ForgetPassword">Forgot Password?</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

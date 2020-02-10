@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8">
+  <title>Creating Fixed Header and Footer with CSS</title>
+  <style>
+      /* Add some padding on document's body to prevent the content
+      to go underneath the header and footer */
+  </style>
+  </head>
+ 
+      <div class="fixed-header">
+          <div class="container">
+              <nav>
+                  <a href="dashboard">Home</a>
+                  <a href="#">About</a>
+                  <a routerLink="projects">Projects</a>
+                  <a href="#">Services</a>
+                  <a href="#">Contact Us</a>
+                  <a style="margin-left: 40%" routerLink="/logout" >Logout</a>
+              </nav>
+          </div>
+          <router-outlet></router-outlet>
+      </div>
+      
+       
+  

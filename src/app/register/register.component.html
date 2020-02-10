@@ -1,0 +1,74 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <div >
+        <div class="modal-dialog modal-register">
+            <div class="modal-content">
+                <h4 class="modal-title">Registration Form</h4><br>
+                <div class="modal-body">
+                    <!-- Form register -->
+                    <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">                     
+                        <div class="md-form">
+                            <i class="fa fa-user prefix white-text"></i> <label
+                               >First Name</label>
+                            <input type="text"  class="form-control"
+                                name="firstName" formControlName="firstName" required="true" />
+     
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-user prefix white-text"></i> <label
+                               >Last Name</label>
+                            <input type="text"  class="form-control"
+                                name="lastName" formControlName="lastName" required="true" />
+    
+                        </div>
+                        
+                        <div class="md-form">
+                            <i class="fa fa-mobile prefix white-text"></i> <label
+                                >Mobile</label>
+                            <input type="mobile" 
+                                class="form-control" name="mobile" formControlName="mobile" required="true" minlength="10"
+                                maxlength="10" />
+                        </div>
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix white-text"></i> <label
+                                >Email</label>
+                            <input type="email" 
+                                class="form-control" name="email" formControlName="email" required="true" />
+    
+                        </div>
+                        
+                        <div class="md-form">
+                            <i class="fa fa-password prefix white-text"></i> <label
+                                >Password</label>
+                            <input type="password" 
+                                class="form-control" name="password" formControlName="password" required="true" />
+    
+                        </div>
+                        <br>
+                        <div class="md-form">
+                             <label class="col-md-4 control-label" for="button1id"></label> <i
+                                        class="fa fa-text prefix white-text"></i>
+                            <button style="background-color: green" type="submit"
+                                         class="btn btn-info btn-sm">Register</button>
+                                         &nbsp;&nbsp; &nbsp;&nbsp;
+                             <button style="background-color: grey" type="reset"
+                                       class="btn btn-info btn-sm">Reset</button>
+                        </div>                      
+                    </form>
+    
+                    <!-- Form register -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
