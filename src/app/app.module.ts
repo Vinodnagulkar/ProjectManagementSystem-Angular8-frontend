@@ -14,6 +14,10 @@ import { ProjectdiscriptionComponent } from './projectdiscription/projectdiscrip
 import { ProjecttaskComponent } from './projecttask/projecttask.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateprojectComponent } from './updateproject/updateproject.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { FooterComponent } from './footer/footer.component';
+import { CustomsoftwaredevelopmentComponent } from './customsoftwaredevelopment/customsoftwaredevelopment.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { UpdateprojectComponent } from './updateproject/updateproject.component'
     AddprojectComponent,
     ProjectdiscriptionComponent,
     ProjecttaskComponent,
-    UpdateprojectComponent
+    UpdateprojectComponent,
+    PagenotfoundComponent,
+    ContactusComponent,
+    FooterComponent,
+    CustomsoftwaredevelopmentComponent
   ],
   imports: [
     BrowserModule,

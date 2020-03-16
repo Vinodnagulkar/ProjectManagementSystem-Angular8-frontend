@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Project } from './project';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { stringify } from '@angular/compiler/src/util';
+
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +35,8 @@ deleteProjectById(id:number)
   //this.router.navigate(['dashboard/projects']);-----for static data
 }
 
-getProjectById(id:number):Observable<object>{
-  return this.http.get('http://localhost:8082/pms/project/getProjectById/'+id);
+getProjectById(id:number):Observable<Project>{
+  
+  return this.http.get<Project>('http://localhost:8082/pms/project/getProjectById/'+id);
 }
 }

@@ -1,0 +1,18 @@
+
+  /* Style the header */
+  .header {
+    background-color: cornflowerblue;
+    padding: 30px 40px;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    padding-bottom: 67px;
+    margin-top: 12%;
+  }
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

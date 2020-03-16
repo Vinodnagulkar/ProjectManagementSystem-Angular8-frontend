@@ -90,11 +90,15 @@
 }
 
 .image{
-    height:45em; background-size:cover; width:auto;
-	background-image:url('D:\VinodAngular\pms\src\assets\images\carback.jpg');
+	height:41em; 
+	background-size:cover; 
+	width:auto;
+	background-image:url('./../../assets/images/BACK1.jpg');
 	padding-top: 1%;
 	margin: 0px;
-    margin-bottom: 0%;
+	margin-bottom: 0%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
   }
   
   

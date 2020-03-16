@@ -1,12 +1,17 @@
 <app-header></app-header>
+
 <div id="myDIV" class="header">
     <form [formGroup]="addprojecttaskdata" (ngSubmit)="addprojecttask(addprojecttaskdata.value)">
-    <h2>Task Create</h2>
-    <input class="input1" type="text"  formControlName="title" placeholder="Title...">
+        
+    <h2>Task Creation</h2><br>
+    <input class="input1" type="text"  formControlName="title" placeholder="Title..."> <a routerLink="/projects" routerLinkActive="active"
+    class="btn btn-primary btn-sm"><span
+        class="glyphicon glyphicon-add"></span>Back</a>
     
     <br><br> <input class="input2" type="text" formControlName="description" placeholder="Discription">
-
-    <button type="ngsubmit" class="addBtn">Create</button>
+    
+    <button type="ngsubmit" class="btn btn-primary addBtn"><span
+      class="glyphicon glyphicon-add"></span>Create</button>
     </form>
   </div>
   <br>

@@ -14,6 +14,7 @@ export class ProjectComponent implements OnInit {
 
   projectList:Project[];
 
+
   ngOnInit():void {
     this.projectService.getAllProjects().subscribe(data=>{
     this.projectList=data;
@@ -23,10 +24,10 @@ export class ProjectComponent implements OnInit {
   }
 
 
-  routeWithData(project:Project)
+  routeWithData(pid:number)
   {
-    console.log("--------------------->"+project.projectId,project.projectName);
-    this.router.navigate(['/getproject', JSON.stringify(project)]);
+    console.log("--------------------->"+pid);
+    this.router.navigate(['/getproject',pid]);
   }
 
 }

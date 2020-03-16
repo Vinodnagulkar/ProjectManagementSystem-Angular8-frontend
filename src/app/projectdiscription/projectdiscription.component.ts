@@ -11,17 +11,22 @@ import { Observable } from 'rxjs';
   styleUrls: ['./projectdiscription.component.css']
 })
 export class ProjectdiscriptionComponent implements OnInit {
+  
   public isActive:boolean = false;
 
   constructor(private router:ActivatedRoute, private route:Router, private projectService:ProjectserviceService ) { 
    
   }
   
-  project:Project;
+project: Project = new Project();
+
+  id:number;
   
   ngOnInit() {
-    this.project=JSON.parse(this.router.snapshot.params["project"]);
+    this.id= +this.router.snapshot.params["pid"];
+    this.getProjectById(this.id);
   }
+ 
 
   updateProject(pid:number)
   {
@@ -35,7 +40,7 @@ export class ProjectdiscriptionComponent implements OnInit {
     console.log(project.projectName);
       this.projectService.addProject(project).subscribe(data=>{
       //alert("Project Created successfully!")
-      this.route.navigate(['dashboard/projects']);
+      this.route.navigate(['/projects']);
     });
   }
 
@@ -43,12 +48,25 @@ export class ProjectdiscriptionComponent implements OnInit {
     console.log("------------>"+pid);
     this.projectService.deleteProjectById(pid).subscribe(data=>{
       alert("Project deleted successfully!");
-      this.route.navigate(['dashboard/projects']);
+      this.route.navigate(['/projects']);
     });
   }
 
-  backToDiscription(){
-    this.route.navigate(['getProjects/project']);
+getProjectById(id:number)
+{
+ this.projectService.getProjectById(id).subscribe(data=>{
+ this.project = JSON.parse(JSON.stringify(data));
+},
+  err => {
+    console.log(err, '--------------------------------------', this.project);
   }
+);
+}
+
+
+backToDiscription()
+{
+  this.route.navigate(['/project']);
+}
 
 }

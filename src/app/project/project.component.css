@@ -21,7 +21,6 @@ table.greenTable {
     font-weight: bold;
     color: #F0F0F0;
     text-align: center;
-    border-left: 2px solid #24943A;
   }
   table.greenTable thead th:first-child {
     border-left: none;
@@ -43,6 +42,6 @@ table.greenTable {
     font-size: 14px;
     line-height: 1.5;
     border-radius: 3px;
-    margin-left: 59%;
+    margin-left: 60%;
 
 }

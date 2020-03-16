@@ -1,26 +1,14 @@
 <app-header></app-header>
-<head>
-    <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="ISO-8859-1">
-    
-    </head>
     <div style="background-color: #99A3A4">
         <form>
-            <div class="addbutton"><h3 class="head" style="color: black">PROJECTS
-                <a href="addproject "
-                    class="btn btn-info btn-sm"><span
+            <div class="addbutton"><h3 class="head" style="color: black">Projects
+                <a routerLink="/addproject" routerLinkActive="active"
+                    class="btn btn-primary btn-sm"><span
                         class="glyphicon glyphicon-add"></span>Add Project</a></h3></div>
            
-                <table class="greenTable" border="1">
+                <table class="greenTable">
                     <thead>
-                        <tr style="color: black">
+                        <tr>
                             <th>Project Id</th>
                             <th>Project Name</th>                            
                         </tr>
@@ -28,11 +16,10 @@
                     <tbody>
                             <tr *ngFor="let project of projectList;">
                                 <td><b>{{project.projectId}}</b></td>
-                                <td><b ><a style="color: black" class ='btn'> <i (click)="routeWithData(project)">{{project.projectName}}</i></a></b></td>         
+                                <td><b ><a style="color: black" class ='btn'> <i (click)="routeWithData(project.pid)">{{project.projectName}}</i></a></b></td>         
                             </tr>
                     </tbody>
                 </table>
         </form>
-        
     </div>
-   
+

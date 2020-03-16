@@ -1,25 +1,38 @@
-<head>
-  <meta charset="utf-8">
-  <title>Creating Fixed Header and Footer with CSS</title>
-  <style>
-      /* Add some padding on document's body to prevent the content
-      to go underneath the header and footer */
-  </style>
-  </head>
- 
-      <div class="fixed-header">
-          <div class="container">
-              <nav>
-                  <a href="dashboard">Home</a>
-                  <a href="#">About</a>
-                  <a routerLink="projects">Projects</a>
-                  <a href="#">Services</a>
-                  <a href="#">Contact Us</a>
-                  <a style="margin-left: 40%" routerLink="/logout" >Logout</a>
-              </nav>
-          </div>
-          <router-outlet></router-outlet>
-      </div>
-      
+<div class="container">
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" routerLink="/pagenotfound" routerLinkActive="active">About</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" routerLink="/projects" routerLinkActive="active">Projects</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" routerLink="/pagenotfound" routerLinkActive="active">Services</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                    <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                    <a class="nav-link" routerLink="/logout" >Logout</a>
+                            </li>
+                    </ul>        
+            </div>
+            </div>
+    
+    </nav>
+</div>  
        
   
